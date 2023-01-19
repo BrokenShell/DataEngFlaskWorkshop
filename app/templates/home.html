@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Home Page</h1>
+    <form action="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">
+        <p><label>Upload CSV File
+            <input type="file" name="file" accept="text/csv" required>
+        </label></p>
+        <button type="submit">Process CSV</button>
+        <br class="clear"/>
+    </form>
+
+{% endblock %}
